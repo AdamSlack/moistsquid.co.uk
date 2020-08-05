@@ -34,17 +34,3 @@ data "aws_iam_policy_document" "moistsquid_bucket_policy" {
     }
     
 }
-
-resource "aws_s3_bucket_object" "index" {
-    bucket       = "moistsquid.co.uk"
-    key          = "index.html"
-    source       = "../src/index.html"
-    content_type = "text/html"
-}
-
-resource "aws_s3_bucket_object" "error" {
-    bucket       = "moistsquid.co.uk"
-    key          = "error.html"
-    source       = "../src/error.html"
-    content_type = "text/html"
-}
