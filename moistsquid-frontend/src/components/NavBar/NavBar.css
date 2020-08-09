@@ -1,0 +1,30 @@
+nav {
+    border-radius: 1em;
+    background: var(--colour-blue);
+    padding: 1em;
+    margin: 0.5em;
+    display: flex;
+}
+
+h1 {
+    margin-right: auto;
+    color: var(--colour-black);
+}
+
+a {
+    padding: 1em;
+    vertical-align: middle;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-decoration: none;
+    color: var(--colour-black);
+}
+
+a:hover {
+    background: var(--colour-light-blue);
+    border-radius: 1em;
+}
+
+a:visited {
+    text-decoration: none;
+}
