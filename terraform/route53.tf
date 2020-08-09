@@ -3,9 +3,21 @@ data "aws_route53_zone" "moistsquid" {
     private_zone = false
 }
 
-resource "aws_route53_record" "app" {
+resource "aws_route53_record" "moistsquid_record" {
     zone_id = data.aws_route53_zone.moistsquid.zone_id
     name    = "moistsquid.co.uk"
+    type    = "A"
+
+    alias {
+        name                   = aws_cloudfront_distribution.moistsquid.domain_name
+        zone_id                = aws_cloudfront_distribution.moistsquid.hosted_zone_id
+        evaluate_target_health = false
+    }
+}
+
+resource "aws_route53_record" "www_moistsquid_record" {
+    zone_id = data.aws_route53_zone.moistsquid.zone_id
+    name    = "www.moistsquid.co.uk"
     type    = "A"
 
     alias {
@@ -29,12 +41,4 @@ resource "aws_route53_record" "cert_validation" {
     ttl             = 60
     type            = each.value.type
     zone_id         = data.aws_route53_zone.moistsquid.zone_id
-
-    // name    = aws_acm_certificate.cert.domain_validation_options.0.resource_record_name
-    // type    = aws_acm_certificate.cert.domain_validation_options.0.resource_record_type
-    // zone_id = aws_route53_zone.moistsquid.id
-    // records = [
-    //     aws_acm_certificate.cert.domain_validation_options.0.resource_record_value
-    // ]
-    // ttl     = 60
 }

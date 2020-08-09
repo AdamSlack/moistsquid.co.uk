@@ -2,6 +2,12 @@ resource "aws_acm_certificate" "cert" {
     provider = aws.us-east-1
     domain_name       = "moistsquid.co.uk"
     validation_method = "DNS"
+
+    subject_alternative_names = ["www.moistsquid.co.uk"]
+    
+    lifecycle {
+        create_before_destroy = true
+    }
 }
 
 resource "aws_acm_certificate_validation" "cert" {

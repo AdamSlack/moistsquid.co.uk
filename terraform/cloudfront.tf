@@ -16,7 +16,7 @@
     enabled             = true
     default_root_object = "index.html"
 
-    aliases = ["moistsquid.co.uk"]
+    aliases = ["moistsquid.co.uk", "www.moistsquid.co.uk"]
 
     restrictions {
         geo_restriction {
