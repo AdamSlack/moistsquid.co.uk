@@ -18,8 +18,8 @@ const createBall = () => ({
     xAcc: (Math.random() > 0.5 ? 1 : -1) * (Math.random() * 10),
     yAcc: (Math.random() > 0.5 ? 1 : -1) * (Math.random() * 10),
     
-    xVelMax: 10,
-    yVelMax: 10,
+    xVelMax: (Math.random() > 0.5 ? 1 : -1) * (Math.random() * 10),
+    yVelMax: (Math.random() > 0.5 ? 1 : -1) * (Math.random() * 10),
     
     draw: drawBall,
     colour: Math.random() > 0.5? '#ff8080' : '#0099b0',
