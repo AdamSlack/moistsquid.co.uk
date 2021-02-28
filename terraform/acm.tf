@@ -3,7 +3,10 @@ resource "aws_acm_certificate" "cert" {
     domain_name       = "moistsquid.co.uk"
     validation_method = "DNS"
 
-    subject_alternative_names = ["www.moistsquid.co.uk"]
+    subject_alternative_names = [
+        "www.moistsquid.co.uk",
+        "auth.moistsquid.co.uk"
+    ]
     
     lifecycle {
         create_before_destroy = true
