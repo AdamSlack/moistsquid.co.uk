@@ -7,8 +7,8 @@ export const BinDayList = (props) => {
   return (
     <ul>
       {
-        binDays.map(({ binColour }) => (
-          <BinDayListItem binColour={binColour} key={binColour} />
+        binDays.map((binDay) => (
+          <BinDayListItem key={binDay.binColour} {...binDay} />
         ))
       }
     </ul>
