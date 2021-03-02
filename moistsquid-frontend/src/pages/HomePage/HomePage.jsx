@@ -1,14 +1,11 @@
 import React from 'react'
-import NavBar from '../../components/NavBar/NavBar'
-import Game from '../../components/Game/Game'
 
-const HomePage = () => {
-    return (
-        <div>
-            <NavBar></NavBar>
-            <Game></Game>
-        </div>
-    )
+export const HomePage = (props) => {
+  return (
+    <div>
+      Hello World
+    </div>
+  )
 }
 
-export default HomePage
+export default HomePage;

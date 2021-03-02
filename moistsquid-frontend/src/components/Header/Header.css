@@ -1,0 +1,23 @@
+nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0
+}
+
+nav ul li a{
+  padding: 1em;
+  transition: 0.5s;
+}
+nav ul li {
+  padding: 1em 0;
+}
+
+nav ul li a:hover {
+  transition: 0.5s;
+  background-color: aqua;
+}
+
+nav ul li a:visited {
+  color: black;
+}
