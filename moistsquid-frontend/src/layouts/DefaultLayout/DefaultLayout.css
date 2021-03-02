@@ -1,4 +1,24 @@
-div.page-content {
-  width: 50%;
-  margin: auto;
+
+/**Desktop Query*/
+@media only screen and (min-width: 768px) {
+  div.page-content {
+    width: 60%;
+    margin: auto;
+  }
+}
+
+/*Tablet Query*/
+@media only screen and (min-width: 481px) and (max-width:768px) {
+  div.page-content {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+/*Mobile Query*/
+@media only screen and (max-width:480px) {
+  div.page-content {
+    width: 95%;
+    margin: auto;
+  }
 }
