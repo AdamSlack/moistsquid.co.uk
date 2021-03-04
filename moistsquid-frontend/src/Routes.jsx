@@ -21,11 +21,6 @@ export const Routes = () => {
       <Switch>
           <Route path="/" exact>
             <DefaultLayout>
-              <HomePage />
-            </DefaultLayout>
-          </Route>
-          <Route path="/bin-days" exact>
-            <DefaultLayout>
               <BinDaysPage />
             </DefaultLayout>
           </Route>
