@@ -8,10 +8,7 @@ export const Header = () => {
     <nav id="header">
       <ul>
         <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/bin-days">Bin Days</Link>
+          <Link to="/">Bin Days</Link>
         </li>
       </ul>
     </nav>
