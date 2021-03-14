@@ -42,7 +42,7 @@ export const BinDayList = (props) => {
             The next collection is {daysAway} Days Away!
           </p>
           <p>
-            You will need to the <b className={nextBinColour}>{nextBinColour}</b> bin out in {daysAway - 1 } days (Before you go to bed!)
+            You will need to put the <b className={nextBinColour}>{nextBinColour}</b> bin out in <b className={nextBinColour}>{daysAway - 1} days</b> (Before you go to bed!)
           </p>
         </div>
       )}
