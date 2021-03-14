@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react'
 import { fetchBinDays } from '../../services'
 import {
   BinDayList,
-  LoadingSpinner,
 } from '../../components'
+import BinDayListErrorCard from '../../components/BinDayListErrorCard/BinDayListErrorCard'
+import { BinDayListLoadingCard } from '../../components/BinDayListLoadingCard'
 
 export const BinDaysPage = (props) => {
 
@@ -24,28 +25,12 @@ export const BinDaysPage = (props) => {
   }, [])
 
   if(requestError) {
-    return (
-      <>
-        <p>Well this is embarrasing!</p>
-        <p>It looks like the request get bin times didn't work.</p>
-        <p>Please try again later!</p>
-      </>
-    )
+    return <BinDayListErrorCard />;
   }
 
   return (
     <>
-    {
-      isLoading 
-      ? (
-        <>
-          <h2> Fetching Bin Days!</h2>
-          <p> if it takes longer than 15 seconds, then the app will fail :(</p>
-          <p> Please retry if it does!</p>
-          <LoadingSpinner />
-        </>
-      ): (<BinDayList binDays={binDays}/>)
-    }
+      { isLoading ? (<BinDayListLoadingCard />): (<BinDayList binDays={binDays}/>)}
     </>
   )
 }

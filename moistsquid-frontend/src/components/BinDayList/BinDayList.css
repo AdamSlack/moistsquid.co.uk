@@ -3,3 +3,21 @@ ul.binDayList {
   margin: 0;
   padding: 0;
 }
+
+div.binDayList b {
+  color: white;
+  padding: 0.25em 0.5em;
+  border-radius: 0.5em;
+}
+
+div.binDayList b.Black {
+  background-color: black;
+}
+
+div.binDayList b.Blue {
+  background-color: blue;
+}
+
+div.binDayList b.Brown {
+  background-color: brown;
+}
